@@ -62,12 +62,9 @@
 
 <button onclick="readFile()">Submit File</button>
 
-    <div class="col s12 m7">
+    <div class="col s12 m7" id="infoPanel" style="display: none">
         <h2 class="header">Is this Recyclable?</h2>
         <div class="card horizontal">
-            <div class="card-image">
-                <img src="https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiH_6K7l77hAhXkkOAKHcGYBPEQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.theguardian.com%2Fenvironment%2F2018%2Ffeb%2F26%2Fgovernment-dragging-its-feet-over-plastic-bottle-scheme-say-mps&psig=AOvVaw1mYjPhmNKXtHkmDtbsh1Py&ust=1554733408936709">
-            </div>
             <div class="card-stacked">
                 <div class="card-content">
                     <p>This looks recyclable. You should find an appropriate bin to throw it in immediately</p>
@@ -123,6 +120,7 @@
     let global = null;
 
     function readFile() {
+        document.getElementById("infoPanel").style.display = 'inline';
 
 
         if (this.files && this.files[0]) {
